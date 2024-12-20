@@ -1,0 +1,46 @@
+Difference Between Class and Struct in C#:
+Type:
+
+Class: Reference type (stored in the heap).
+Struct: Value type (stored in the stack).
+Memory Allocation:
+
+Class: Allocated on the heap. Objects are managed by the garbage collector.
+Struct: Allocated on the stack, making it faster but limited in size.
+Inheritance:
+
+Class: Supports inheritance, meaning you can derive one class from another.
+Struct: Does not support inheritance but can implement interfaces.
+Default Behavior:
+
+Class: Fields are initialized to their default values (e.g., null, 0).
+Struct: Fields are not automatically initialized, and all fields must be assigned before use.
+Usage:
+
+Class: Used for complex data models that require behavior (methods) and inheritance.
+Struct: Best for lightweight data containers (like coordinates, points, etc.).
+Keyword Differences:
+
+Class: Passed by reference by default.
+Struct: Passed by value by default, creating a copy when assigned or passed to methods.
+Other Relationships Between Classes in C#:
+Association:
+
+A "uses" relationship where one class depends on another.
+Example: A Car class might "use" a Driver class to define functionality.
+Aggregation:
+
+A "has-a" relationship where one class contains another but both can exist independently.
+Example: A Team class has multiple Players, but if the Team is destroyed, Players can still exist.
+Composition:
+
+A strong form of aggregation where the lifetime of the contained object is tied to the container.
+Example: A Body class contains Heart and Brain. If Body is destroyed, Heart and Brain cannot exist separately.
+Dependency:
+
+A "temporary uses" relationship where one class depends on another only during specific operations.
+Example: A PaymentProcessor class depends on a Logger class to log transactions but doesn't retain the Logger.
+Polymorphism (is-a relationship):
+
+Allows a subclass to be treated as its base class.
+Example: A Dog is-a Animal. You can use Dog wherever an Animal is expected.
